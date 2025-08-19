@@ -1,6 +1,4 @@
 "use client"
-import Link from "next/link";
-import { Button } from "./ui/button";
 import { Lugrasimo } from 'next/font/google'
 
 const lugrasimo = Lugrasimo({
@@ -20,14 +18,13 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center justify-center text-center min-h-[80vh]">
-            <div className="mb-8">
-              <img 
-                src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/e396c73e160421b1cec3300f7b80a3b79cd2a996_controller.png"
-                alt="Custom MIDI Controller"
-                className="w-full max-w-xs md:max-w-sm lg:max-w-md rounded-lg transform transition-transform duration-300 animate-levitate"
-              />
-            </div>
-
+      <div className="mb-8">
+        <img 
+          src="/assets/controller.png"
+          alt="Custom MIDI Controller"
+          className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl rounded-lg transform transition-transform duration-300 animate-levitate transition-transform duration-300 animate-pulse"
+        />
+      </div>
 
             <div>
               <img 
