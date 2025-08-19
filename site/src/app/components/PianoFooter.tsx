@@ -233,13 +233,14 @@ const initAudio = () => {
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50"></div>
           </div>
           <p className="text-xs text-gray-400 font-mono tracking-wide">
-            DESIGN A MIDI CONTROLLER - GET A GRANT TO BUILD IT IRL!
+            DESIGN A MIDI CONTROLLER - GET STUFF TO BUILD IT IRL!
           </p>
           <div className="mt-3 flex items-center justify-center space-x-6 text-xs text-gray-500">
             <span>PCB and FIRMWARE by <Link href={"https://hackclub.slack.com/team/U0735FTMS3V"}>@nimit</Link></span>
             <span>•</span>
             <span>WEBSITE by <Link href={"https://hackclub.slack.com/team/U0807ADEC6L"}>@Manan</Link></span>
-            
+            <span>•</span>
+            <span>ART by <Link href={"https://hackclub.slack.com/team/U097UCZE2BB"}>@Aishaani</Link></span>
           </div>
         </div>
       </div>

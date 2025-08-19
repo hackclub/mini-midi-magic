@@ -12,7 +12,7 @@ export const ProcessSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text">
-            THE PROCESS
+            THE ALCHEMY
           </h2>
           <p className="text-xl text-muted-foreground">From concept to creation</p>
         </div>
