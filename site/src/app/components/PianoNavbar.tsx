@@ -109,11 +109,11 @@ const initAudio = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${
       isScrolled ? 'transform -translate-y-1 scale-[0.98]' : ''
     }`}>
-      <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 shadow-2xl">
-        <div className="bg-gradient-to-b from-gray-700 via-gray-600 to-gray-700 px-8 py-4 border-b-2 border-gray-800">
+      <div className="bg-[#cc3636] shadow-2xl">
+        <div className="bg-[#cf5d5d] px-8 py-4 border-b-2 border-gray-800">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-2 bg-gray-800 rounded-lg px-3 py-2 border border-gray-600">
+              <div className="flex items-center space-x-2 bg-gray-800 rounded-lg px-3 py-2 border border-black">
                 <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></div>
                 <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse shadow-lg shadow-yellow-400/50" style={{ animationDelay: '0.5s' }}></div>
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50" style={{ animationDelay: '1s' }}></div>
@@ -163,7 +163,7 @@ const initAudio = () => {
           ${isPianoOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}
         `}>
           <div className={`
-            relative px-4 py-6 bg-gradient-to-b from-gray-800 to-gray-900
+            relative px-4 py-6 bg-black
             transform transition-all duration-700 ease-out
             ${isPianoOpen ? 'translate-y-0 scale-100' : '-translate-y-8 scale-95'}
           `}>

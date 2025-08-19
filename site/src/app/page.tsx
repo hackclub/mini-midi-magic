@@ -6,7 +6,6 @@ import { KitSection } from "./components/path";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <PianoNavbar />
       <Hero />
       <ProcessSection />
       <KitSection />
