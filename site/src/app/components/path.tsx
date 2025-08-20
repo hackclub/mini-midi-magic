@@ -26,11 +26,11 @@ export const ProcessSection = () => {
             <div className="flex-1 space-y-6">
               <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-primary mb-3">Design PCB</h3>
-                <p className="text-muted-foreground">Make the Board O'Magic</p>
+                <p className="text-muted-foreground">Make the Board O&apos;Magic</p>
               </div>
               <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-6 hover:border-accent/40 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-accent mb-3">CAD the Case</h3>
-                <p className="text-muted-foreground">Design the Case O'Protection</p>
+                <p className="text-muted-foreground">Design the Case O&apos;Protection</p>
               </div>
               <div className="bg-gradient-to-br from-led-orange/10 to-led-orange/5 border border-led-orange/20 rounded-xl p-6 hover:border-led-orange/40 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-led-orange mb-3">Write Firmware</h3>
