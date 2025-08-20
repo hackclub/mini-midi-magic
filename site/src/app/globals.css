@@ -30,6 +30,6 @@ body {
 
 }
 @font-face {
-  font-family: "GigerBread";
-  src: url();
+  font-family: "GingerBread";
+  src: url("/fonts/Gingerbread House.ttf") format("truetype");
 }

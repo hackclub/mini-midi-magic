@@ -3,7 +3,7 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 
 export const ProcessSection = () => {
   return (
-    <section className="py-20 bg-black relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-[#000000] to-purple-400 relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-1/3 right-1/4 w-28 h-28 bg-primary/10 rounded-full blur-2xl"></div>
         <div className="absolute bottom-1/3 left-1/4 w-36 h-36 bg-accent/10 rounded-full blur-2xl"></div>
@@ -11,9 +11,13 @@ export const ProcessSection = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text">
-            THE ALCHEMY
-          </h2>
+<h2 className="text-4xl md:text-6xl text-white mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text" 
+    style={{ 
+      fontFamily: 'GingerBread, serif',
+      letterSpacing: '0.1em'
+    }}>
+  THE ALCHEMY
+</h2>
           <p className="text-xl text-muted-foreground">From concept to creation</p>
         </div>
 
@@ -22,15 +26,15 @@ export const ProcessSection = () => {
             <div className="flex-1 space-y-6">
               <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-primary mb-3">Design PCB</h3>
-                <p className="text-muted-foreground">Create your circuit board layout with custom button configurations</p>
+                <p className="text-muted-foreground">Make the Board O'Magic</p>
               </div>
               <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-6 hover:border-accent/40 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-accent mb-3">CAD the Case</h3>
-                <p className="text-muted-foreground">Design a 3D printed enclosure that fits your board perfectly</p>
+                <p className="text-muted-foreground">Design the Case O'Protection</p>
               </div>
               <div className="bg-gradient-to-br from-led-orange/10 to-led-orange/5 border border-led-orange/20 rounded-xl p-6 hover:border-led-orange/40 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-led-orange mb-3">Write Firmware</h3>
-                <p className="text-muted-foreground">Program the controller behavior and MIDI mappings</p>
+                <p className="text-muted-foreground">Write the magical code to enchant your board</p>
               </div>
             </div>
 

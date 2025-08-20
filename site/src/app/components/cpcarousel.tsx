@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
-
 const kitItems = [
   {
     name: "Arduino Nano",
@@ -55,84 +54,91 @@ const kitItems = [
 
 export default function KitItemsCarousel() {
   return (
-    <div className="w-full max-w-4xl mx-auto p-4 md:p-6">
-      <div className="text-center mb-6 md:mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">MIDI Controller Kit</h2>
-        <p className="text-sm md:text-base text-gray-600">Everything you need to build your own MIDI controller</p>
-      </div>
-      <div className="hidden md:block">
-        <Carousel className="w-full max-w-3xl mx-auto">
-          <CarouselContent>
-            {kitItems.map((item, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-2 h-full">
-                  <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex justify-end p-3">
-                      <div className={`w-3 h-3 rounded-full ${item.pinColor}`}></div>
-                    </div>
-                    <div className="flex justify-center items-center h-48 p-4 bg-gray-50 flex-shrink-0">
-                      <img 
-                        src={item.image} 
-                        alt={item.name}
-                        className={`max-h-full max-w-full object-contain ${item.rotation} hover:rotate-0 transition-transform duration-300`}
-                        onError={(e) => {
-                          e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y3ZjdmNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE2IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2UgTm90IEZvdW5kPC90ZXh0Pjwvc3ZnPg==';
-                        }}
-                      />
-                    </div>
-                    <div className="p-6 flex-1 flex flex-col">
-                      <h3 className="font-bold text-lg text-gray-800 mb-2">{item.name}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-      <div className="md:hidden">
-        <Carousel
-          opts={{
-            align: "start",
-          }}
-          orientation="vertical"
-          className="w-full max-w-sm mx-auto"
-        >
-          <CarouselContent className="-mt-1 h-[500px]">
-            {kitItems.map((item, index) => (
-              <CarouselItem key={index} className="pt-1 basis-1/3">
-                <div className="p-1">
-                  <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full">
-                    <div className="flex h-full">
-                      <div className="w-24 flex-shrink-0 flex justify-center items-center p-2 bg-gray-50 relative">
-                        <div className={`absolute top-1 right-1 w-2 h-2 rounded-full ${item.pinColor}`}></div>
-                        <img 
-                          src={item.image} 
-                          alt={item.name}
-                          className={`max-h-12 max-w-full object-contain ${item.rotation} hover:rotate-0 transition-transform duration-300`}
-                          onError={(e) => {
-                            e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y3ZjdmNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE2IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2UgTm90IEZvdW5kPC90ZXh0Pjwvc3ZnPg==';
-                          }}
-                        />
+    <div className="min-h-screen w-full bg-gradient-to-b to-blue-300 from-black flex flex-col">
+      <div className="flex-1 flex flex-col justify-center px-4 md:px-6 py-8">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-white mb-4 text-4xl md:text-6xl pt-16" style={{fontFamily: 'GingerBread, serif',letterSpacing: '0.1em'}}>THE INVENTORY</h2>
+          <p className="text-xl text-gray-300">Your kit to make your MIDI controller</p>
+        </div>
+        
+        <div className="flex-1 flex items-center justify-center">
+          <div className="w-full max-w-6xl">
+            <div className="hidden md:block">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {kitItems.map((item, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-2 h-full">
+                        <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden h-full flex flex-col hover:shadow-xl transition-shadow duration-300">
+                          <div className="flex justify-end p-3">
+                            <div className={`w-3 h-3 rounded-full ${item.pinColor}`}></div>
+                          </div>
+                          <div className="flex justify-center items-center h-48 p-4 bg-gray-50 flex-shrink-0">
+                            <img 
+                              src={item.image} 
+                              alt={item.name}
+                              className={`max-h-full max-w-full object-contain ${item.rotation} hover:rotate-0 transition-transform duration-300`}
+                              onError={(e) => {
+                                e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y3ZjdmNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE2IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2UgTm90IEZvdW5kPC90ZXh0Pjwvc3ZnPg==';
+                              }}
+                            />
+                          </div>
+                          <div className="p-6 flex-1 flex flex-col">
+                            <h3 className="font-bold text-lg text-gray-800 mb-2">{item.name}</h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex-1 p-3 flex flex-col justify-center">
-                        <h3 className="font-bold text-sm text-gray-800 mb-1">{item.name}</h3>
-                        <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">{item.description}</p>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
+            
+            <div className="md:hidden">
+              <Carousel
+                opts={{
+                  align: "start",
+                }}
+                orientation="vertical"
+                className="w-full max-w-sm mx-auto"
+              >
+                <CarouselContent className="-mt-1 h-[60vh]">
+                  {kitItems.map((item, index) => (
+                    <CarouselItem key={index} className="pt-1 basis-1/3">
+                      <div className="p-1">
+                        <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full">
+                          <div className="flex h-full">
+                            <div className="w-24 flex-shrink-0 flex justify-center items-center p-2 bg-gray-50 relative">
+                              <div className={`absolute top-1 right-1 w-2 h-2 rounded-full ${item.pinColor}`}></div>
+                              <img 
+                                src={item.image} 
+                                alt={item.name}
+                                className={`max-h-12 max-w-full object-contain ${item.rotation} hover:rotate-0 transition-transform duration-300`}
+                                onError={(e) => {
+                                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y3ZjdmNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE2IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2UgTm90IEZvdW5kPC90ZXh0Pjwvc3ZnPg==';
+                                }}
+                              />
+                            </div>
+                            <div className="flex-1 p-3 flex flex-col justify-center">
+                              <h3 className="font-bold text-sm text-gray-800 mb-1">{item.name}</h3>
+                              <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">{item.description}</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
-
