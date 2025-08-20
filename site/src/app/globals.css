@@ -33,3 +33,8 @@ body {
   font-family: "GingerBread";
   src: url("/fonts/Gingerbread House.ttf") format("truetype");
 }
+
+
+* {
+    scroll-behavior: smooth;
+}

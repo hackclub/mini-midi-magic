@@ -91,7 +91,7 @@ const initAudio = () => {
     <footer className="mt-16 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 shadow-2xl border-t-4 border-gray-700">
 
       <div className="h-2 bg-red-800 shadow-inner"></div>
-      <div className="bg-gradient-to-b from-gray-700 via-gray-600 to-gray-700 px-8 py-6 border-b-2 border-gray-800">
+      <div className="bg-gradient-to-b from-black via-purple-300 to-blue-400 px-8 py-6 border-b-2 border-gray-800">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center space-x-4">
