@@ -51,10 +51,6 @@ export const Waiting = () => {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
-
-          <div className="pt-16">
-            <ArrowDown className="w-8 h-8 text-white/50 mx-auto animate-bounce" />
-          </div>
         </div>
       </div>
     </section>
