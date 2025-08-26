@@ -16,24 +16,24 @@ export const Hero = () => {
           <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-led-blue/20 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col items-center justify-center text-center min-h-[80vh]">
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8 w-full">
                 <img 
                   src="/assets/controller.png"
                   alt="Custom MIDI Controller"
-                  className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl rounded-lg transform transition-transform duration-300 animate-levitate transition-transform duration-300 animate-pulse"
+                  className="w-full max-w-[280px] sm:max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl rounded-lg transform transition-transform duration-300 animate-levitate mx-auto"
                 />
               </div>
 
-              <div>
+              <div className="w-full">
                 <img 
                   src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/9dd56d0fe2fb209279350974d028137fb179e9ee_mini_midi_magic.svg"
                   alt="Mini Midi Magic"
-                  className="w-auto max-w-md md:max-w-lg mx-auto mb-6 animate-glow"
+                  className="w-auto max-w-[250px] sm:max-w-sm md:max-w-lg mx-auto mb-4 sm:mb-6 animate-glow"
                 />
-                <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl mx-auto px-2">
                   Design your custom MIDI controller from scratch
                 </p>
               </div>
@@ -105,7 +105,14 @@ export const Hero = () => {
           position: relative;
           z-index: 10000;
         }
+
+        /* Additional mobile-specific styles */
+        @media (max-width: 640px) {
+          .banner {
+            padding: 1rem 0;
+          }
+        }
       `}</style>
     </section>
   );
-}; 
+};
