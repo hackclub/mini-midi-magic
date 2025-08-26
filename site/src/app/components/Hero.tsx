@@ -33,7 +33,7 @@ export const Hero = () => {
                   alt="Mini Midi Magic"
                   className="w-auto max-w-[250px] sm:max-w-sm md:max-w-lg mx-auto mb-4 sm:mb-6 animate-glow"
                 />
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl mx-auto px-2">
+                <p className="text-base text-white sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-xs sm:max-w-md md:max-w-2xl mx-auto px-2">
                   Design your custom MIDI controller from scratch
                 </p>
               </div>

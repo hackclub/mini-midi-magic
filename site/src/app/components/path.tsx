@@ -18,17 +18,17 @@ export const ProcessSection = () => {
     }}>
   THE ALCHEMY
 </h2>
-          <p className="text-xl text-muted-foreground">From concept to creation</p>
+          <p className="text-xl text-muted-foreground text-white">From concept to creation</p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto text-white">
           <div className="hidden md:flex items-center gap-4">
             <div className="flex-1 space-y-6">
-              <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-all duration-300">
-                <h3 className="text-2xl font-bold text-primary mb-3">Design PCB</h3>
-                <p className="text-muted-foreground">Make the Board O&apos;Magic</p>
+              <div className="bg-gradient-to-br text-white from-primary/10 to-primary/5 border border-primary/20 rounded-xl p-6 hover:border-primary/40 transition-all duration-300">
+                <h3 className="text-2xl text-white font-bold text-primary mb-3">Design PCB</h3>
+                <p className="text-muted-foreground text-white">Make the Board O&apos;Magic</p>
               </div>
-              <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-6 hover:border-accent/40 transition-all duration-300">
+              <div className="bg-gradient-to-br from-accent/10 text-white to-accent/5 border border-accent/20 rounded-xl p-6 hover:border-accent/40 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-accent mb-3">CAD the Case</h3>
                 <p className="text-muted-foreground">Design the Case O&apos;Protection</p>
               </div>
