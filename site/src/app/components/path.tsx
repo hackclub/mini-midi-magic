@@ -3,7 +3,7 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 
 export const ProcessSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#000000] to-purple-400 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden" style={{ backgroundImage: 'url(/assets/bgpath.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="absolute inset-0">
         <div className="absolute top-1/3 right-1/4 w-28 h-28 bg-primary/10 rounded-full blur-2xl"></div>
         <div className="absolute bottom-1/3 left-1/4 w-36 h-36 bg-accent/10 rounded-full blur-2xl"></div>
