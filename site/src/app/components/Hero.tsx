@@ -41,6 +41,8 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+
+      <div className="transition-overlay"></div>
       
       <style jsx>{`
         @keyframes levitate {
@@ -106,10 +108,47 @@ export const Hero = () => {
           z-index: 10000;
         }
 
+        /* Smooth transition overlay */
+        .transition-overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 120px;
+          background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 0.1) 20%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.6) 80%,
+            rgba(0, 0, 0, 0.9) 100%
+          );
+          pointer-events: none;
+          z-index: 5;
+        }
+
+        /* Alternative: Wave transition (uncomment to use instead of gradient) */
+        /*
+        .transition-overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 60px;
+          background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,120 L0,60 Q300,20 600,60 T1200,60 L1200,120 Z' fill='rgba(0,0,0,0.8)'/%3E%3C/svg%3E") center/cover;
+          pointer-events: none;
+          z-index: 5;
+        }
+        */
+
         /* Additional mobile-specific styles */
         @media (max-width: 640px) {
           .banner {
             padding: 1rem 0;
+          }
+          
+          .transition-overlay {
+            height: 80px;
           }
         }
       `}</style>
