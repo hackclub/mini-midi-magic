@@ -89,7 +89,7 @@ Your schematic is mostly ready to go around this point, but you should take a fe
 4. Make sure to label your jumpers. The LCD and the DAC breakout jumpers might still have the `CONN` label on them, double click it to rewrite it as your screen or breakout. You can also leave it as it is and add some text to clarify headers next to it.</br>
 ![Rename Jumpers](/guide/renamedjumpers.png)</br>
 5. Also add some unconnected mounting hole footprints! These will be used later to make holes in your PCB that will screw into the case! </br>
-![Mounting Hole symbol](/guide/mountinghole.png)</br>
+![Mounting Hole symbol](/guide/mountingholes.png)</br>
 ### Footprint Assignment
 The next step is to assign footprints. With the footprint assignment tool open, you need to click on each unassigned component and select a footprint from the panel on the right. You need to use the searchbar to get meaningful results. If you are confused, you can right click the footprint after selecting it to view the footprint in the footprint in the editor. Use the measure tool to compare the dimensions with the standards mentioned in the datasheet. Some of the footprints you may need for this project include:
 
