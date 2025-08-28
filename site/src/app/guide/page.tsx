@@ -9,8 +9,6 @@ import { ArrowLeft } from 'lucide-react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-
-
 export default async function GuidePage() {
   const filePath = path.join(process.cwd(), 'public', 'guide', 'guide.md')
   const markdownContent = fs.readFileSync(filePath, 'utf8')
@@ -64,7 +62,7 @@ export default async function GuidePage() {
                     {children}
                   </p>
                 ),
-                code: (props: any) => {
+                code: ((props: any) => {
                   const {node, inline, className, children, ...rest} = props;
                   const match = /language-(\w+)/.exec(className || '');
                   const language = match ? match[1] : '';
@@ -94,7 +92,7 @@ export default async function GuidePage() {
                       </SyntaxHighlighter>
                     );
                   }
-                },
+                }) as any,
                 pre: ({children}) => (
                   <div className="mb-4">
                     {children}
