@@ -11,7 +11,6 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero />
       <ProcessSection />
-      <KitItemsCarousel />
       <Waiting />
       <PianoFooter />
     </div>

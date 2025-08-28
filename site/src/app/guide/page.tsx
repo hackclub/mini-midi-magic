@@ -113,7 +113,7 @@ export default async function GuidePage() {
         </div>
         <div className="mt-8 text-center">
           <div className="inline-flex items-center gap-2 text-slate-300 text-sm">
-          <span>thats it gng, make a board and submit now. RIGHT NOW. I hope I made it clear. RIGHT NOW.</span> </div>
+          <span>thats it gng, make a board and submit now. RIGHT NOW. I hope I've made it clear. RIGHT NOW.</span> </div>
         </div>
       </div>
     </div>
