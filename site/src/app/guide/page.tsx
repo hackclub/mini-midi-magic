@@ -61,18 +61,24 @@ export default async function GuidePage() {
                     {children}
                   </p>
                 ),
-                code: (props) => {
-                  const inline = 'inline' in props && props.inline;
-                  return inline ? (
-                    <code className="bg-slate-100 text-slate-800 px-2 py-1 rounded font-mono text-sm">
-                      {props.children}
+                code: (props: any) => {
+                  const {node, inline, className, children, ...rest} = props;
+                  
+                  return !inline ? (
+                    <code className="inline-block bg-slate-800 text-green-400 px-3 py-1 mx-1 rounded font-mono text-sm" {...rest}>
+                      {children}
                     </code>
                   ) : (
-                    <code className="block bg-slate-50 border border-slate-200 text-slate-800 p-4 rounded-lg font-mono text-sm overflow-x-auto">
-                      {props.children}
+                    <code className="bg-slate-100 text-slate-800 px-2 py-1 rounded font-mono text-sm" {...rest}>
+                      {children}
                     </code>
                   );
                 },
+                pre: ({children}) => (
+                  <div className="mb-4">
+                    {children}
+                  </div>
+                ),
                 ul: ({children}) => (
                   <ul className="list-disc list-inside text-slate-600 mb-4 space-y-2">
                     {children}

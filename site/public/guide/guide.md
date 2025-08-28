@@ -43,19 +43,19 @@ The schematic will teach you how to interface all of these features into your si
 
 ## Designing a schematic
 The schematic for this project must include the orpheus pico. Since the orpheus pico is pin compatible with the normal pico, we can just use the same symbol as the regular raspberry pi pico which comes preinstalled with modern kicad.
-Make sure to connect your GND and AGND to the ground symbol and connect your 3v3 to a +3v3 symbol. This will make it easier when you power certain devices later. </br>
+Make sure to connect your GND and AGND to the ground symbol and connect your 3v3 to a +3v3 symbol. This will make it easier when you power certain devices later.  
 ![pico gnd](/guide/picognd.png)
 ### Switch matrix
 The switch matrix is used to reduce the number of GPIO pins necessary for each key. It is generally preferred over using each key individually, as you can use a larger number of keys in the same number of pins. A 6x6=36 matrix can be used instead of 36 individual keys to reduce the number of pins needed from 36 down to 6+6=12.
 In a matrix, the keys are arranged in rows and columns and each key press is detected by scanning the rows and columns to find the active key. However, this alone causes issues when multiple keys are pressed simultaneously. Thus, we use diodes between the keys to prevent ghosting and make sure that each key is detected properly. For this, we first lay out all our switch symbols in a table. Each key should be positioned in a single row and column. **No two keys should share the same row and column**. The diode we use is the 1N4148, which is a cheap and convenient diode and popular for this application.
-When connecting, make sure all the diode directions are the same. Either use column -> row (COL2ROW) or use row -> column (ROW2COL) throughout all the switches.</br>
-![ROW2COL Switch matrix](/guide/switchmatrix.png) </br>
-![ROW COL connections in MCU](/guide/switchmatrixmcu.png)</br>
+When connecting, make sure all the diode directions are the same. Either use column -> row (COL2ROW) or use row -> column (ROW2COL) throughout all the switches. 
+![ROW2COL Switch matrix](/guide/switchmatrix.png)  
+![ROW COL connections in MCU](/guide/switchmatrixmcu.png) 
 ### Rotary Encoders
-We will be using EC11 rotary encoders. Add the symbol `RotaryEncoder_Switch_MP`. The switch means that it is clickable, and the MP stands for mounting points, which are the pads connected to the base of the mounting pins of the encoder. These pins are used to physically hold the encoder in place. Connect the central C pin and the MP to your ground. SW1 and SW2 connect to your regular switch matrix, following the same COL2ROW or ROW2COL convention as the other switches, with the same diode. The A and B pins connect to your microcontroller's GPIO pins, and are used to measure the signals. We will not go too deep into this because most firmware tools have libraries ready for encoders. </br>
-![Rotary Encoder Symbol](/guide/encodersymbol.png) </br>
-![Encoder Pins on MCU](/guide/encoderpins.png) </br>
-![Encoder Buttons in Matrix](/guide/encoderbuttons.png) </br>
+We will be using EC11 rotary encoders. Add the symbol `RotaryEncoder_Switch_MP`. The switch means that it is clickable, and the MP stands for mounting points, which are the pads connected to the base of the mounting pins of the encoder. These pins are used to physically hold the encoder in place. Connect the central C pin and the MP to your ground. SW1 and SW2 connect to your regular switch matrix, following the same COL2ROW or ROW2COL convention as the other switches, with the same diode. The A and B pins connect to your microcontroller's GPIO pins, and are used to measure the signals. We will not go too deep into this because most firmware tools have libraries ready for encoders.  
+![Rotary Encoder Symbol](/guide/encodersymbol.png)  
+![Encoder Pins on MCU](/guide/encoderpins.png)  
+![Encoder Buttons in Matrix](/guide/encoderbuttons.png)  
 ### TFT LCD
 For this project, we will be using the ST7735R LCD, which is a great LCD with a nice resolution, and it's broken out via SPI. The SPI interface makes it really easy for us to add this display while keeping complexity low. The one we will be using has the following pinout (from top to bottom) - `LCD`, `SCK`, `SDA`, `A0`, `RESET`, `CS`, `GND` and `VCC`. For this, we will simply add a 1x8 connector to the schematic, and label it with the text tool. 
 - The LCD pin provides the LCD Backlight power, we can use this to control brightness and the backlight itself. If you are not changing the backlight, connect this to 3v3 or use an unused GPIO (you can use PWM later to control the brightness). 
@@ -80,16 +80,16 @@ For audio output, we will be using the PCM5100 IIS DAC. This DAC provides high-q
 
 ### A little bit more on the schematic
 Your schematic is mostly ready to go around this point, but you should take a few steps to make it look cleaner and easier to read!
-1. Use bounding boxes around certain sections of the schematic to group certain areas. Visually seperate if a set of buttons is used differently from another in the schematic too!</br>
-![Boxes](/guide/boundingboxes.png)</br>
-2. Use labels instead of connecting far components! Sometimes, labels might become easier to read when your schematic has a lot of components, and they are all placed distant from the main microcontroller.</br>
-![Labels](/guide/labels.png)</br>
-3. Add text to explain certain confusing sections. Maybe you have a few different matrixes with different purposes? Label them with the text tool to let people know what those sections mean.</br>
-![Helpful text](/guide/helpfultext.png)</br>
-4. Make sure to label your jumpers. The LCD and the DAC breakout jumpers might still have the `CONN` label on them, double click it to rewrite it as your screen or breakout. You can also leave it as it is and add some text to clarify headers next to it.</br>
-![Rename Jumpers](/guide/renamedjumpers.png)</br>
-5. Also add some unconnected mounting hole footprints! These will be used later to make holes in your PCB that will screw into the case! </br>
-![Mounting Hole symbol](/guide/mountingholes.png)</br>
+1. Use bounding boxes around certain sections of the schematic to group certain areas. Visually seperate if a set of buttons is used differently from another in the schematic too! 
+![Boxes](/guide/boundingboxes.png) 
+2. Use labels instead of connecting far components! Sometimes, labels might become easier to read when your schematic has a lot of components, and they are all placed distant from the main microcontroller. 
+![Labels](/guide/labels.png) 
+3. Add text to explain certain confusing sections. Maybe you have a few different matrixes with different purposes? Label them with the text tool to let people know what those sections mean. 
+![Helpful text](/guide/helpfultext.png) 
+4. Make sure to label your jumpers. The LCD and the DAC breakout jumpers might still have the `CONN` label on them, double click it to rewrite it as your screen or breakout. You can also leave it as it is and add some text to clarify headers next to it. 
+![Rename Jumpers](/guide/renamedjumpers.png) 
+5. Also add some unconnected mounting hole footprints! These will be used later to make holes in your PCB that will screw into the case!  
+![Mounting Hole symbol](/guide/mountingholes.png) 
 ### Footprint Assignment
 The next step is to assign footprints. With the footprint assignment tool open, you need to click on each unassigned component and select a footprint from the panel on the right. You need to use the searchbar to get meaningful results. If you are confused, you can right click the footprint after selecting it to view the footprint in the footprint in the editor. Use the measure tool to compare the dimensions with the standards mentioned in the datasheet. Some of the footprints you may need for this project include:
 
@@ -98,26 +98,26 @@ The next step is to assign footprints. With the footprint assignment tool open, 
 - `MX_PCB_1.00u` for any MX (keyboard) switches.
 - `RotaryEncoder_EC11-Switch_Vertical_H20mm-MountingHoles` for the rotary encoders.
 - `MountingHole_x.xmm_Mx` for mounting holes. Since I am using M3 screws, this will be `MountingHole_3.2mm_M3`.
-Some of these names might be different based on your kicad installation and the libraries you have installed with it. Don't be afraid to ask if you can't find your desired footprints!</br>
-![Assign Footprints tool](/guide/assignfootprints.png) </br>
-![Assignments 1](/guide/orphpicofootprint.png) </br>
-![Assignments 2](/guide/encoderfootprint.png) </br>
-![Assignments 3](/guide/jumperfootprint.png) </br>
-![Assignments 4](/guide/keyswitchfootprint.png) </br>
-![Assignments 5](/guide/mountingholefootprints.png) </br>
+Some of these names might be different based on your kicad installation and the libraries you have installed with it. Don't be afraid to ask if you can't find your desired footprints! 
+![Assign Footprints tool](/guide/assignfootprints.png)  
+![Assignments 1](/guide/orphpicofootprint.png)  
+![Assignments 2](/guide/encoderfootprint.png)  
+![Assignments 3](/guide/jumperfootprint.png)  
+![Assignments 4](/guide/keyswitchfootprint.png)  
+![Assignments 5](/guide/mountingholefootprints.png)  
 ## Designing a PCB
-Now that we are done with the schematic, we can apply all changes to the footprint assignment and move on with the PCB. Start by pressing the Convert schematic to PCB button (shown below). This should take your footprints and add them to your PCB. If there are any errors, cross check the footprints associated with them and make sure they even exist!</br>
-![Update PCB tool](/guide/updatepcbfromsch.png)</br>
+Now that we are done with the schematic, we can apply all changes to the footprint assignment and move on with the PCB. Start by pressing the Convert schematic to PCB button (shown below). This should take your footprints and add them to your PCB. If there are any errors, cross check the footprints associated with them and make sure they even exist! 
+![Update PCB tool](/guide/updatepcbfromsch.png) 
 ### Component Placement
 To get started, place your components around the PCB layout as your need. You might want to use the grid tool to change the grid sizes to make it easier to place certain footprints. Eg. You should change the grid size to a submultiple of `19.05mm x 19.05mm` when placing MX switches, because that is their clearance in an actual keyboard/keypad! You can also use the Grid origin tool to set a different origin than your actual board. Once all your components are placed, you should create an edge cut. Select the `Edge.Cuts` layer and using the rectangle/polygon tool, sketch out the PCB cutout. If you want curves, you can use the arc or the curve tool.
-Here is my design! </br>
-![My design!](/guide/componentplacement.png)</br>
+Here is my design!  
+![My design!](/guide/componentplacement.png) 
 ### Routing your traces
-While a lot of people might start with an autorouter, it isn't always perfect. Instead, it is best to manually check every trace and every route. Keep traces as short as possible and straight to the point. Don't be afraid to use vias to switch your trace between layers, because you won't be paying extra for them! If your traces are too jumbled, you might want to consider erasing that certain area to reroute them better. A personal tip is to have long horizontal traces be on the opposite layer as long vertical traces, as you will not need to use vias as often and your board will be overall cleaner and easier to debug. </br>
-![Traces!](/guide/routing.png) </br>
+While a lot of people might start with an autorouter, it isn't always perfect. Instead, it is best to manually check every trace and every route. Keep traces as short as possible and straight to the point. Don't be afraid to use vias to switch your trace between layers, because you won't be paying extra for them! If your traces are too jumbled, you might want to consider erasing that certain area to reroute them better. A personal tip is to have long horizontal traces be on the opposite layer as long vertical traces, as you will not need to use vias as often and your board will be overall cleaner and easier to debug.  
+![Traces!](/guide/routing.png)  
 ### Silkscreen
-The silkscreen layer is used to add cosmetic effects to your PCB's top layers. You can use the text tool while either F.Silkscreen or B.Silkscreen are selected to write text. The polygon tool is also adapted to create filled shapes, and you can even insert logos using kicad's built-in image conversion tool! This includes anything from decals to cool graphics. Logos, labels and text is very common, so make sure to use the silkscreen to it's fullest potential and create something cool!</br>
-![Image Converter tool](/guide/imageconverter.png)</br>
+The silkscreen layer is used to add cosmetic effects to your PCB's top layers. You can use the text tool while either F.Silkscreen or B.Silkscreen are selected to write text. The polygon tool is also adapted to create filled shapes, and you can even insert logos using kicad's built-in image conversion tool! This includes anything from decals to cool graphics. Logos, labels and text is very common, so make sure to use the silkscreen to it's fullest potential and create something cool! 
+![Image Converter tool](/guide/imageconverter.png) 
 ## Making a case
 `[gonna let someone else take this one]`
 
