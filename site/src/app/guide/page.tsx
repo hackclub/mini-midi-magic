@@ -54,15 +54,15 @@ export default async function GuidePage() {
                     {children}
                   </p>
                 ),
-                code: (props: any) => {
-                  const { inline, children } = props;
+                code: (props) => {
+                  const inline = 'inline' in props && props.inline;
                   return inline ? (
                     <code className="bg-slate-100 text-slate-800 px-2 py-1 rounded font-mono text-sm">
-                      {children}
+                      {props.children}
                     </code>
                   ) : (
                     <code className="block bg-slate-50 border border-slate-200 text-slate-800 p-4 rounded-lg font-mono text-sm overflow-x-auto">
-                      {children}
+                      {props.children}
                     </code>
                   );
                 },
