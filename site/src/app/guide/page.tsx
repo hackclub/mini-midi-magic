@@ -6,6 +6,8 @@ import path from 'path'
 import { Button } from '../components/ui/button'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default async function GuidePage() {
   const filePath = path.join(process.cwd(), 'public', 'guide', 'guide.md')
@@ -63,16 +65,38 @@ export default async function GuidePage() {
                 ),
                 code: (props: any) => {
                   const {node, inline, className, children, ...rest} = props;
+                  const match = /language-(\w+)/.exec(className || '');
+                  const language = match ? match[1] : '';
                   
-                  return !inline ? (
-                    <code className="inline-block bg-slate-800 text-green-400 px-3 py-1 mx-1 rounded font-mono text-sm" {...rest}>
-                      {children}
-                    </code>
-                  ) : (
-                    <code className="bg-slate-100 text-slate-800 px-2 py-1 rounded font-mono text-sm" {...rest}>
-                      {children}
-                    </code>
-                  );
+                  // Check if it's a code block (has language class or multiple lines)
+                  const isCodeBlock = className && className.startsWith('language-') || 
+                                     (typeof children === 'string' && children.includes('\n'));
+                  
+                  if (inline || (!isCodeBlock && !className)) {
+                    // Inline code - small blocks
+                    return (
+                      <code className="inline-block bg-slate-800 text-green-400 px-3 py-1 mx-1 rounded font-mono text-sm" {...rest}>
+                        {children}
+                      </code>
+                    );
+                  } else {
+                    // Code blocks - large blocks with syntax highlighting
+                    return (
+                      <SyntaxHighlighter
+                        style={vscDarkPlus}
+                        language={language || 'text'}
+                        PreTag="div"
+                        className="rounded-lg text-sm mb-4"
+                        customStyle={{
+                          margin: 0,
+                          borderRadius: '0.5rem',
+                          fontSize: '0.875rem'
+                        }}
+                      >
+                        {String(children).replace(/\n$/, '')}
+                      </SyntaxHighlighter>
+                    );
+                  }
                 },
                 pre: ({children}) => (
                   <div className="mb-4">
