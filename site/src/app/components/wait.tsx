@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import { Button } from './ui/button';
-
+import Link from 'next/link';
 export const Waiting = () => {
   return (
     <section 
@@ -44,12 +44,14 @@ export const Waiting = () => {
           </p>
 
           <div className="pt-8">
+            <Link href={"/guide"}>
             <Button 
               className="bg-white text-black font-semibold px-11 py-3.5 text-lg hover:bg-white/95 hover:scale-102 transform transition-all duration-300 shadow-lg cursor-pointer"
             >
               Guide
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
+            </Link>
           </div>
         </div>
       </div>
