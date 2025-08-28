@@ -12,10 +12,17 @@ export default async function GuidePage() {
   const markdownContent = fs.readFileSync(filePath, 'utf8')
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-8 px-4">
+    <div className="min-h-screen py-8 px-4"
+        style={{ 
+        backgroundImage: 'url(/assets/bgpath.png)', 
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
+      }}>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-200/30 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 -right-40 w-80 h-80 bg-blue-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 -left-40 w-96 h-96 bg-purple-200/15 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -105,7 +112,7 @@ export default async function GuidePage() {
           </div>
         </div>
         <div className="mt-8 text-center">
-          <div className="inline-flex items-center gap-2 text-slate-500 text-sm">
+          <div className="inline-flex items-center gap-2 text-slate-300 text-sm">
           <span>thats it gng, make a board and submit now. RIGHT NOW. I hope I made it clear. RIGHT NOW.</span> </div>
         </div>
       </div>
