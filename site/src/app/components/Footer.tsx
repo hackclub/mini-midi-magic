@@ -9,13 +9,12 @@ export const Footer = () => {
         <Accordion
           type="single"
           collapsible
-          className="bg-gray-800/50 border-r border-gray-700 px-8 py-6"
-        >
+          className="bg-[#831ceb] border-r border-gray-700 px-8 py-6 text-white">
           <AccordionItem value="rules">
             <AccordionTrigger className="text-gray-200 hover:text-white transition-colors text-xl md:text-2xl">
               General Rules
             </AccordionTrigger>
-<AccordionContent className="text-gray-400 leading-relaxed mt-4 text-base md:text-lg">
+<AccordionContent className="text-white leading-relaxed mt-4 text-base md:text-lg ">
   <ul className="list-disc list-inside space-y-2">
     <li>You have to be 18 or under.</li>
     <li>Your board has to be unique - no plagiarism.</li>
@@ -28,7 +27,7 @@ export const Footer = () => {
         <Accordion
           type="single"
           collapsible
-          className="bg-gray-800/50 border-l border-gray-700 px-8 py-6"
+          className="bg-[#000000] border-l border-gray-700 px-8 py-6"
         >
           <AccordionItem value="faqs">
             <AccordionTrigger className="text-gray-200 hover:text-white transition-colors text-xl md:text-2xl">
