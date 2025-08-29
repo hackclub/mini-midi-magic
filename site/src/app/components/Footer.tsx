@@ -9,7 +9,7 @@ export const Footer = () => {
         <Accordion
           type="single"
           collapsible
-          className="bg-[#831ceb] px-8 py-6 text-white">
+          className="bg-gradient-to-b from-[#483183] via-[#b10ce2] to-[#483183] px-8 py-6 text-white">
           <AccordionItem value="rules">
             <AccordionTrigger className="text-gray-200 hover:text-white transition-colors text-xl md:text-2xl">
               General Rules
@@ -27,7 +27,7 @@ export const Footer = () => {
         <Accordion
           type="single"
           collapsible
-          className="bg-[#000000] px-8 py-6">
+          className="bg-gradient-to-b from-[#08123b] via-[#0a1748] to-black px-8 py-6">
           <AccordionItem value="faqs">
             <AccordionTrigger className="text-gray-200 hover:text-white transition-colors text-xl md:text-2xl">
               FAQs
