@@ -4,12 +4,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './
 
 export const Footer = () => {
   return (
-    <footer className="h-screen flex flex-col">
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-2">
+    <footer className="flex flex-col">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <Accordion
           type="single"
           collapsible
-          className="bg-gray-800/50 border-r border-gray-700 flex flex-col justify-center px-8 py-6"
+          className="bg-gray-800/50 border-r border-gray-700 px-8 py-6"
         >
           <AccordionItem value="rules">
             <AccordionTrigger className="text-gray-200 hover:text-white transition-colors text-xl md:text-2xl">
@@ -23,7 +23,7 @@ export const Footer = () => {
         <Accordion
           type="single"
           collapsible
-          className="bg-gray-800/50 border-l border-gray-700 flex flex-col justify-center px-8 py-6"
+          className="bg-gray-800/50 border-l border-gray-700 px-8 py-6"
         >
           <AccordionItem value="faqs">
             <AccordionTrigger className="text-gray-200 hover:text-white transition-colors text-xl md:text-2xl">
