@@ -4,8 +4,7 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 export const ProcessSection = () => {
   return (
     <section className="py-20 relative overflow-hidden" style={{ backgroundImage: 'url(/assets/bgpath.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      {/* Top gradient overlay */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
       
       <div className="absolute inset-0">
         <div className="absolute top-1/3 right-1/4 w-28 h-28 bg-primary/10 rounded-full blur-2xl"></div>
@@ -100,8 +99,8 @@ export const ProcessSection = () => {
         </div>
       </div>
 
-      {/* Bottom gradient overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-black/95 via-black/70 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/60 to-transparent pointer-events-none z-5"></div>
     </section>
   );
 };
@@ -168,8 +167,7 @@ export const KitSection = () => {
 
   return (
     <section className="py-12 md:py-20 bg-gray-200 relative overflow-hidden -mt-20 pt-20">
-      {/* Top gradient overlay */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
       
       <div className="absolute inset-0 opacity-20" 
            style={{
@@ -244,11 +242,8 @@ export const KitSection = () => {
         </div>
       </div>
       
-      {/* Bottom curved transition */}
-      {/* Bottom gradient overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-transparent via-black/20 to-transparent pointer-events-none z-5"></div>
     </section>
   );
 };
-
-export default KitSection;
