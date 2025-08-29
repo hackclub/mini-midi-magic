@@ -4,6 +4,8 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 export const ProcessSection = () => {
   return (
     <section className="py-20 relative overflow-hidden" style={{ backgroundImage: 'url(/assets/bgpath.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
+      
       <div className="absolute inset-0">
         <div className="absolute top-1/3 right-1/4 w-28 h-28 bg-primary/10 rounded-full blur-2xl"></div>
         <div className="absolute bottom-1/3 left-1/4 w-36 h-36 bg-accent/10 rounded-full blur-2xl"></div>
@@ -96,7 +98,6 @@ export const ProcessSection = () => {
           </div>
         </div>
       </div>
-
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
     </section>
   );
@@ -164,6 +165,8 @@ export const KitSection = () => {
 
   return (
     <section className="py-12 md:py-20 bg-gray-200 relative overflow-hidden -mt-20 pt-20">
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-gray-200/80 via-gray-200/40 to-transparent pointer-events-none z-10"></div>
+      
       <div className="absolute inset-0 opacity-20" 
            style={{
              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d2691e' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -236,7 +239,7 @@ export const KitSection = () => {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-200/80 via-gray-300/40 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-200/80 via-gray-200/40 to-transparent pointer-events-none z-10"></div>
     </section>
   );
 };
