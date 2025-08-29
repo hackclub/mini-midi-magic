@@ -56,6 +56,8 @@ const kitItems = [
 export default function KitItemsCarousel() {
   return (
     <div className="min-h-screen w-full flex flex-col text-white relative" style={{ backgroundImage: 'url(/assets/bgkit.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
+      
       <div className="flex-1 flex flex-col justify-center px-4 md:px-6 py-8 relative z-20">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-white mb-4 text-4xl md:text-6xl pt-16" style={{fontFamily: 'GingerBread, serif',letterSpacing: '0.1em'}}>THE INVENTORY</h2>

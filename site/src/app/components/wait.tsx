@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
+
 export const Waiting = () => {
   return (
     <section 
@@ -12,6 +13,9 @@ export const Waiting = () => {
         backgroundPosition: 'center' 
       }}
     >
+      {/* Top gradient overlay */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
+      
       <div className="absolute inset-0">
         <div className="absolute top-1/3 right-1/4 w-28 h-28 bg-primary/8 rounded-full blur-2xl"></div>
         <div className="absolute bottom-1/3 left-1/4 w-32 h-32 bg-accent/8 rounded-full blur-2xl"></div>

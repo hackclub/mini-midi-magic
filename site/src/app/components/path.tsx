@@ -4,6 +4,7 @@ import { ArrowRight, ArrowDown } from 'lucide-react';
 export const ProcessSection = () => {
   return (
     <section className="py-20 relative overflow-hidden" style={{ backgroundImage: 'url(/assets/bgpath.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      {/* Top gradient overlay */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
       
       <div className="absolute inset-0">
@@ -98,6 +99,8 @@ export const ProcessSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Bottom gradient overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
     </section>
   );
@@ -165,7 +168,8 @@ export const KitSection = () => {
 
   return (
     <section className="py-12 md:py-20 bg-gray-200 relative overflow-hidden -mt-20 pt-20">
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-gray-200/80 via-gray-200/40 to-transparent pointer-events-none z-10"></div>
+      {/* Top gradient overlay */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
       
       <div className="absolute inset-0 opacity-20" 
            style={{
@@ -239,7 +243,10 @@ export const KitSection = () => {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-200/80 via-gray-200/40 to-transparent pointer-events-none z-10"></div>
+      
+      {/* Bottom curved transition */}
+      {/* Bottom gradient overlay */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
     </section>
   );
 };
