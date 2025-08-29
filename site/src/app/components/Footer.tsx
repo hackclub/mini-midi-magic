@@ -15,9 +15,14 @@ export const Footer = () => {
             <AccordionTrigger className="text-gray-200 hover:text-white transition-colors text-xl md:text-2xl">
               General Rules
             </AccordionTrigger>
-            <AccordionContent className="text-gray-400 leading-relaxed mt-4 text-base md:text-lg">
-              All the general rules of the event go here.
-            </AccordionContent>
+<AccordionContent className="text-gray-400 leading-relaxed mt-4 text-base md:text-lg">
+  <ul className="list-disc list-inside space-y-2">
+    <li>You have to be 18 or under.</li>
+    <li>Your board has to be unique - no plagiarism.</li>
+    <li>You have to make a well-documented journal for the whole process (Idea → Schematic → PCB → Case).</li>
+    <li>One person can only make one project.</li>
+  </ul>
+</AccordionContent>
           </AccordionItem>
         </Accordion>
         <Accordion
@@ -29,9 +34,13 @@ export const Footer = () => {
             <AccordionTrigger className="text-gray-200 hover:text-white transition-colors text-xl md:text-2xl">
               FAQs
             </AccordionTrigger>
-            <AccordionContent className="text-gray-400 leading-relaxed mt-4 text-base md:text-lg">
-              Commonly asked questions with answers go here.
-            </AccordionContent>
+<AccordionContent className="text-gray-400 leading-relaxed mt-4 text-base md:text-lg">
+  <ul className="list-disc list-inside space-y-2">
+    <li>What is this? - Mini Midi Magic is a Hackclub YSWS for MIDI boards.</li>
+    <li>Who is running it? - It is being ran by teens at Hackclub. </li>
+    <li>But I don't know how to make MIDI boards :( - No worries, we have a really well made <Link href={"/guide"} className='text-blue-500 underline'>guide</Link> to get started.</li>
+  </ul>
+</AccordionContent>
           </AccordionItem>
         </Accordion>
       </div>
