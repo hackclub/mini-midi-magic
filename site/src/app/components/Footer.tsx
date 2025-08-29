@@ -1,37 +1,86 @@
 "use client"
 import Link from 'next/link';
-import { Accordion, AccordionContent,AccordionItem,AccordionTrigger } from './ui/accordion';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
+
 export const Footer = () => {
   return (
-    <footer className="mt-16 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 shadow-2xl border-t-4 border-gray-700">
-      <Accordion type='single' collapsible>
-        <AccordionItem value='item-1'>
-          <AccordionTrigger>General Rules</AccordionTrigger>
-          <AccordionContent>Helloooo</AccordionContent>
-        </AccordionItem>
-      </Accordion>
-      <div className="bg-gradient-to-b from-gray-800 to-gray-900 px-8 py-6 border-t border-gray-700">
+    <footer className="h-screen flex flex-col">
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-2">
+        <Accordion
+          type="single"
+          collapsible
+          className="bg-gray-800/50 border-r border-gray-700 flex flex-col justify-center px-8 py-6"
+        >
+          <AccordionItem value="rules">
+            <AccordionTrigger className="text-gray-200 hover:text-white transition-colors text-xl md:text-2xl">
+              General Rules
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-400 leading-relaxed mt-4 text-base md:text-lg">
+              All the general rules of the event go here.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+        <Accordion
+          type="single"
+          collapsible
+          className="bg-gray-800/50 border-l border-gray-700 flex flex-col justify-center px-8 py-6"
+        >
+          <AccordionItem value="faqs">
+            <AccordionTrigger className="text-gray-200 hover:text-white transition-colors text-xl md:text-2xl">
+              FAQs
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-400 leading-relaxed mt-4 text-base md:text-lg">
+              Commonly asked questions with answers go here.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
+      <div className="bg-gradient-to-b from-gray-800 to-gray-900 px-6 py-8 border-t border-gray-700">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-3 mb-3">
+          <div className="flex items-center justify-center space-x-3 mb-4">
             <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse shadow-lg shadow-cyan-500/50"></div>
             <span className="text-sm text-gray-300 font-mono tracking-wider">
               MINI MIDI MAGIC
             </span>
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50"></div>
           </div>
-          <p className="text-xs text-gray-400 font-mono tracking-wide">
-            DESIGN A MIDI CONTROLLER - GET STUFF TO BUILD IT IRL!
+          <p className="text-xs text-gray-400 font-mono tracking-wide mb-4">
+            DESIGN A MIDI CONTROLLER · GET STUFF TO BUILD IT IRL!
           </p>
-          <div className="mt-3 flex items-center justify-center space-x-6 text-xs text-gray-500">
-            <span>PCB and FIRMWARE by <Link href={"https://hackclub.slack.com/team/U0735FTMS3V"}>@nimit</Link></span>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-gray-500">
+            <span>
+              PCB & FIRMWARE by{" "}
+              <Link
+                href="https://hackclub.slack.com/team/U0735FTMS3V"
+                className="hover:text-cyan-400 transition-colors"
+              >
+                @nimit
+              </Link>
+            </span>
             <span>•</span>
-            <span>WEBSITE by <Link href={"https://hackclub.slack.com/team/U0807ADEC6L"}>@Manan</Link></span>
+            <span>
+              WEBSITE by{" "}
+              <Link
+                href="https://hackclub.slack.com/team/U0807ADEC6L"
+                className="hover:text-cyan-400 transition-colors"
+              >
+                @Manan
+              </Link>
+            </span>
             <span>•</span>
-            <span>ART by <Link href={"https://hackclub.slack.com/team/U097UCZE2BB"}>@Aishaani</Link></span>
+            <span>
+              ART by{" "}
+              <Link
+                href="https://hackclub.slack.com/team/U097UCZE2BB"
+                className="hover:text-cyan-400 transition-colors"
+              >
+                @Aishaani
+              </Link>
+            </span>
           </div>
         </div>
       </div>
       <div className="h-2 bg-gradient-to-b from-gray-900 to-black"></div>
     </footer>
   );
-}
+};
