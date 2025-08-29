@@ -38,7 +38,7 @@ export const Footer = () => {
   <ul className="list-disc list-inside space-y-2">
     <li>What is this? - Mini Midi Magic is a Hackclub YSWS for MIDI boards.</li>
     <li>Who is running it? - It is being ran by teens at Hackclub. </li>
-    <li>But I don't know how to make MIDI boards :( - No worries, we have a really well made <Link href={"/guide"} className='text-blue-500 underline'>guide</Link> to get started.</li>
+    <li>But I don&apos;t know how to make MIDI boards :( - No worries, we have a really well made <Link href={"/guide"} className='text-blue-500 underline'>guide</Link> to get started.</li>
   </ul>
 </AccordionContent>
           </AccordionItem>
