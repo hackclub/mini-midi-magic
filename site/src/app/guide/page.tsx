@@ -9,13 +9,13 @@ import { ArrowLeft } from 'lucide-react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { Components } from 'react-markdown'
+import { Element } from 'hast'
 
 interface CodeProps {
-  node?: any;
+  node?: Element;
   inline?: boolean;
   className?: string;
   children?: React.ReactNode;
-  [key: string]: any;
 }
 
 export default async function GuidePage() {
