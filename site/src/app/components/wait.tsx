@@ -13,7 +13,34 @@ export const Waiting = () => {
         backgroundPosition: 'center' 
       }}
     >
-      {/* Top gradient overlay */}
+      <style jsx>{`
+        @keyframes shimmer {
+          0% {
+            transform: translateX(-150%);
+          }
+          100% {
+            transform: translateX(250%);
+          }
+        }
+        
+        .shimmer-text {
+            background: linear-gradient(90deg, #797d7a, #fff, #797d7a);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        @keyframes shimmer {
+            to {
+                background-position: 200% center;
+            }
+        }
+      `}</style>
+      
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-10"></div>
       
       <div className="absolute inset-0">
@@ -26,7 +53,7 @@ export const Waiting = () => {
         <div className="text-center max-w-4xl mx-auto space-y-12">
           <div className="space-y-6">
             <h2 
-              className="text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-gradient-to-r from-white via-primary to-accent bg-clip-text leading-tight" 
+              className="shimmer-text text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-gradient-to-r from-white via-primary to-accent bg-clip-text leading-tight" 
               style={{ 
                 fontFamily: 'GingerBread, serif, Arial, sans-serif', 
                 letterSpacing: '0.08em',
