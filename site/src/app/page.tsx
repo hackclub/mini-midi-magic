@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { PianoFooter } from "./components/PianoFooter";
 import { Hero } from "./components/Hero";
 import { ProcessSection } from "./components/path";
@@ -10,7 +10,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero />
       <ProcessSection />
-     {/*<KitItemsCarousel />*/}
+      {/*<KitItemsCarousel />*/}
       <Waiting />
       <Footer />
     </div>
