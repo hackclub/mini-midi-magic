@@ -1,3 +1,4 @@
+name = 'mini-midi-magic-2'
 providers = ['node']
 
 [variables]
