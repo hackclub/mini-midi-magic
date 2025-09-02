@@ -47,4 +47,4 @@ Yes, Mini Midi Magic is double-dippable with the summer of making! Make sure to 
 Bring them over to the mini midi magic channel in slack! Or, dm me (@nimit) personally!
 
 ## Get started!
-[Read the guide!](guide.md)
+[Read the guide!](GUIDE.md)
