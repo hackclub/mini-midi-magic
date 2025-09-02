@@ -45,7 +45,7 @@ export default async function GuidePage() {
       </p>
     ),
     code: (props: CodeProps) => {
-      const {node, inline, className, children, ...rest} = props;
+      const {inline, className, children, ...rest} = props;
       const match = /language-(\w+)/.exec(className || '');
       const language = match ? match[1] : '';
       const isCodeBlock = className && className.startsWith('language-') || 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 

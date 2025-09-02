@@ -1,10 +1,4 @@
 "use client"
-import { Lugrasimo } from 'next/font/google'
-
-const lugrasimo = Lugrasimo({
-  subsets: ['latin'],
-  weight: ['400'],
-})
 
 export const Hero = () => {
   return (
