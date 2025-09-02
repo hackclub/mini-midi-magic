@@ -1,7 +1,7 @@
 ![Mini MIDI Magic Logo](/assets/readme/controller.png)
 # Mini Midi Magic
 Hack Club's latest You Ship We Ship, all about making music together!
-Visit the [website!](https://mini.hackclub.com/)
+Visit the [website!](https://midi.hackclub.com/)
 ## You ship
 - A PCB for a custom music board
 - A 3D-printed case for the music board
