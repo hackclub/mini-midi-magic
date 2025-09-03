@@ -98,6 +98,7 @@ export const Footer = () => {
               <Link
                 href="https://hackclub.slack.com/team/U0807ADEC6L"
                 className="hover:text-cyan-400 transition-colors"
+                target="_blank"
               >
                 @Manan
               </Link>
@@ -108,11 +109,21 @@ export const Footer = () => {
               <Link
                 href="https://hackclub.slack.com/team/U097UCZE2BB"
                 className="hover:text-cyan-400 transition-colors"
+                target="_blank"
               >
                 @Aishaani
               </Link>
             </span>
           </div>
+
+          <Link
+            href={"https://hackclub.slack.com/archives/C081ZV47Z8D"}
+            target="_blank"
+          >
+            <p className="text-sm text-gray-300 hover:text-cyan-400 transition-colors mt-2 font-medium">
+              Join #mini-midi-magic on slack!
+            </p>
+          </Link>
         </div>
       </div>
       <div className="h-2 bg-gradient-to-b from-gray-900 to-black"></div>
