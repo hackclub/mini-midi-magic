@@ -18,6 +18,7 @@ Visit the [website!](https://midi.hackclub.com/)
 4. Hackatime is not required to submit your project.
 5. You are only allowed to make one submission.
 6. You must include a readme, with images and renders of your project.
+7. Your project needs to be journalled throughout the design process, with time spent and a screenshot accompanying each entry.
 
 ## FAQ
 - **Is it free to participate?**  
