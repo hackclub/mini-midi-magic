@@ -63,8 +63,11 @@ export const Waiting = () => {
             </h2>
             <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
           </div>
-          <div className="pt-4 sm:pt-8">
-            <Link href={"https://github.com/hackclub/mini-midi-magic"}>
+          <div className="pt-4 gap-8 sm:pt-8">
+            <Link
+              href={"https://github.com/hackclub/mini-midi-magic"}
+              target="_blank"
+            >
               <Button className="bg-white text-black font-semibold w-full max-w-xs sm:max-w-sm md:w-auto md:max-w-none lg:min-w-96 xl:min-w-[500px] 2xl:min-w-[600px] h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-11 lg:px-16 xl:px-20 2xl:px-24 py-3 sm:py-3.5 text-lg sm:text-xl md:text-2xl hover:bg-white/95 hover:scale-102 transform transition-all duration-300 shadow-lg cursor-pointer">
                 Get Started!
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
