@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+.out/
+.next/
+.cache/
+
+# IDE/editor
+.idea/
+.vscode/
+*.swp
+
+# Env/config (keep if you need them for deployment)
+.env
+.env.*
+!.env.example
+
+# Misc
+*.log
