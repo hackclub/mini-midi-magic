@@ -8,7 +8,7 @@ WORKDIR /app
 COPY site/package*.json ./
 
 # Install dependencies
-RUN npm ci
+RUN npm install --no-audit --no-fund
 
 # Copy application source
 COPY site/ ./

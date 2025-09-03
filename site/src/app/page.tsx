@@ -1,5 +1,4 @@
 "use client";
-import { PianoFooter } from "./components/PianoFooter";
 import { Hero } from "./components/Hero";
 import { ProcessSection } from "./components/path";
 //import KitItemsCarousel from "./components/cpcarousel";

@@ -131,7 +131,7 @@ const initAudio = () => {
       <div className="relative px-4 py-8 bg-gradient-to-b from-gray-800 to-gray-900">
         <div className="relative h-28 w-full max-w-7xl mx-auto">
           <div className="flex h-full gap-[1px] bg-gray-900 p-1 rounded-lg shadow-2xl">
-            {notes.map((note, index) => (
+            {notes.map((note) => (
               <button
                 key={note.key}
                 onClick={() => handleKeyPress(note.key, note.frequency)}
@@ -168,7 +168,7 @@ const initAudio = () => {
             ))}
           </div>
           <div className="absolute top-1 h-18 w-full max-w-7xl mx-auto">
-            {blackNotes.map((note, index) => (
+            {blackNotes.map((note) => (
               <button
                 key={note.key}
                 onClick={() => handleKeyPress(note.key, note.frequency)}
