@@ -47,3 +47,10 @@ Bring them over to the mini midi magic channel in slack! Or, dm me (@nimit) pers
 
 ## Get started!
 [Read the guide!](GUIDE.md)
+
+## Submissions Guidelines
+ - [ ] Include a detailed project README file, that includes a render of the complete design, screenshots of the PCB and schematic, as well as a detailed BOM (Bill of materials) as a table.
+ - [ ] A Complete `BOM.csv` file with all costs for your keyboard in USD (optionally in your local currency). Include the parts in the kit as well, for anyone else who wants to recreate the project!
+ - [ ] Document your design process in `journal.md`! Make sure to do this while designing. Each journal entry should have a screenshot or picture of your work, and the time you spent on that section.
+ - [ ] Have your PCB, CAD (.step and other files) and Firmware files in their respective folders.
+ - [ ] Exported gerber (as a zip file) and your printable STL should be in a Production folder. If your firmware needs to be compiled, then drop the compiled binary here too (.uf2).
