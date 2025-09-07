@@ -26,7 +26,7 @@ There will be another guide for assembly later.
 3. Rotary Encoders
 4. Switches and buttons
 5. Slide potentiometer
-6. PCM5100 I2S DAC
+6. PCM5100 I2S DAC Breakout
 7. Some M3 Mounting material
     - Screws
     - Threaded inserts
