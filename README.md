@@ -41,8 +41,6 @@ There is currently no set end date! Don't waste time however, submit your projec
 We want every submission to be the highest quality! Therefore, you are currently allowed only one submission each.
 - **Do I have to use hackatime?**
 No! Hackatime is not required for this YSWS! Instead, log your work into a Journal file, `journal.md` with the approximate time spent and the stuff you did during that time!
-- **Can I double dip with Summer of Making?**
-Yes, Mini Midi Magic is double-dippable with the summer of making! Make sure to use Kicad Wakatime or other hackatime extensions to count your time! [hack.club/kw](https://hack.club/kw/)
 - **I have more questions!**
 Bring them over to the [#mini-midi-magic](https://hackclub.slack.com/archives/C081ZV47Z8D) channel in slack! Or, dm me (@nimit) personally!
 
